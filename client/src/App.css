@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: white;
+  min-height: 100vh;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.game-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.game-status {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.game-status.error {
+  color: #ff6b6b;
+}
+
+.final-scores {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #333;
+  border-top: 3px solid white;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: spin 1s linear infinite;
+}
+
+.game-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start-game-prompt {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.waiting-message {
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.score-display {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.player-score.left {
+  color: white;
+}
+
+.player-score.right {
+  color: white;
+}
+
+.player-score.left.winning {
+  color: #4ade80;
+}
+
+.player-score.right.winning {
+  color: #4ade80;
+}
+
+.game-canvas-container {
+  border: 2px solid white;
+  margin-bottom: 20px;
+}
+
+.game-canvas {
+  display: block;
+  background-color: black;
+}
+
+.controls-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.controls-main {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+}
+
+.controls-sub {
+  font-size: 0.875rem;
+  color: #ccc;
+}
+
+.game-info {
+  margin-top: 20px;
+  font-size: 0.875rem;
+  color: #999;
+  text-align: center;
+}
+
+.instructions {
+  margin-top: 40px;
+  max-width: 600px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #ccc;
+}
+
+.instructions-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.instructions p {
+  margin-bottom: 10px;
+}
+
+.game-button {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.game-button:hover {
+  background-color: #3367d6;
+}
+
+.game-button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .game-title {
+    font-size: 2rem;
+  }
+  
+  .game-canvas {
+    width: 100%;
+    height: auto;
+  }
+  
+  .score-display {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-title {
+    font-size: 1.75rem;
+  }
+  
+  .game-status {
+    font-size: 1rem;
+  }
+  
+  .controls-main {
+    font-size: 1rem;
+  }
+}
+
+
+.match-found{
+  font-size:25px;
+  margin-bottom: 5px;
+}
